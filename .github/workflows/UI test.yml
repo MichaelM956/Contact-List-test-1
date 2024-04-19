@@ -1,0 +1,15 @@
+name: Rational Functional Tester - UI Test
+
+on: workflow_dispatch
+
+jobs:
+    WebUI-Action:
+        name: Rational Functional Tester - UI Test
+        runs-on: self-hosted
+        steps:
+         - name: Rational Functional Tester - UI Test
+           uses: IBM/devopsauto-uitest-actions@main
+           with:
+            workspace: <C:\Data\SampleWorkspace>
+            project: <MyProject>
+            suite: <MySuite>
