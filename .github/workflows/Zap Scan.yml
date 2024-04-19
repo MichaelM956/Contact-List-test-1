@@ -19,4 +19,3 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
           cmd_options: '-r -J -l PASS'
-
