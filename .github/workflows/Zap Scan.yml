@@ -1,0 +1,22 @@
+name: ZAP Baseline Scan
+
+on:
+  push:
+    branches: [main] # Adjust the branch as needed
+
+jobs:
+  zap_scan:
+    runs-on: ubuntu-latest
+    name: OWASP ZAP Baseline Scan
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      
+      - name: Run OWASP ZAP Baseline Scan
+        uses: zaproxy/action-baseline@v0.11.0
+        with:
+          target: https://juice-shop.herokuapp.com/#/
+          token: ${{ secrets.GITHUB_TOKEN }}
+          docker_name: 'owasp/zap2docker-stable'
+          cmd_options: '-r -J -l PASS'
+
