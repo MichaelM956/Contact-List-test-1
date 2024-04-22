@@ -1,0 +1,11 @@
+{
+  "name": "contact-list-test-1",
+  "version": "1.0.0",
+  "description": "Ran a few API Test from a web App called Contact List.",
+  "main": "Add Contact.cy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
